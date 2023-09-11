@@ -1,0 +1,9 @@
+import sys
+import typing
+from PyQt5 import QtCore, uic
+from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QDialog
+
+class ProductionDialog(QDialog):
+    def __init__(self):
+        QDialog.__init__(self)
+        uic.loadUi("view/Producciones.ui", self)
