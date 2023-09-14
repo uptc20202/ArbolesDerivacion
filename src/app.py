@@ -68,8 +68,11 @@ class ProductionDialog(QDialog):
         QDialog.__init__(self)
         uic.loadUi("src/view/Producciones.ui", self)
         self.productionsList = []
-        
+
+        self.btnDeleteProductions.clicked.connect(self.delete_production)
         self.btnAdd.clicked.connect(self.add_production)
+        
+
 
     def add_production(self): 
         no_terminal_symbol = self.noTerminalSimbol.toPlainText()
@@ -81,6 +84,16 @@ class ProductionDialog(QDialog):
             current_text = self.labelProducciones.text()
             new_text = f"{no_terminal_symbol} → {production_input}"
             self.labelProducciones.setText(new_text)
+
+    def delete_production(self):
+        if self.productionsList:
+            self.productionsList.pop() 
+            if self.productionsList:
+                next_production = self.productionsList[-1]
+                new_text = f"{next_production.get_no_terminal_symbol()} → {next_production.get_production()}"
+                self.labelProducciones.setText(new_text)
+            else:
+                self.labelProducciones.setText("V → Producción")
 
 class PopUp(QDialog):
     def __init__(self):

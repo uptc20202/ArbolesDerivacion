@@ -130,7 +130,7 @@ align-items: center;</string>
     <string>V → Producción</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="btnSalir_3">
+  <widget class="QPushButton" name="btnDeleteProductions">
    <property name="geometry">
     <rect>
      <x>360</x>
