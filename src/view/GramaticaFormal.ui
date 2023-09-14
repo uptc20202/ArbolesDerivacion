@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>260</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(25, 28, 35);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="alfabetoTitle">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>50</y>
+      <width>201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 12pt &quot;Karla&quot;;
+font: 12pt &quot;Karla&quot;;
+background-color: rgb(37, 41, 50);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Alfabeto Σ</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="inputAlfabeto">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>80</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Karla&quot;;
+color: rgb(255, 255, 255);
+ border-radius: 15px;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="noTerminalTitle">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>120</y>
+      <width>201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 15pt &quot;Karla&quot;;
+font: 12pt &quot;Karla&quot;;
+background-color: rgb(37, 41, 50);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Simbolos No Terminales V</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="inputNoTerminal">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>150</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Karla&quot;;
+color: rgb(255, 255, 255);
+ border-radius: 15px;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="axiomaTitle">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>190</y>
+      <width>201</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 15pt &quot;Karla&quot;;
+font: 12pt &quot;Karla&quot;;
+background-color: rgb(37, 41, 50);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Axioma S</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="inputAxioma">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>220</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Karla&quot;;
+color: rgb(255, 255, 255);
+ border-radius: 15px;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnProducciones">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>270</y>
+      <width>181</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Karla</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-width: 1px;
+border-style: solid;
+border-radius: 25px;
+font: 12pt &quot;Karla&quot;;
+font: 12pt &quot;Karla&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(37, 41, 50);
+</string>
+    </property>
+    <property name="text">
+     <string>Generar Producciones</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tituloPalabra">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>450</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 15pt &quot;Karla&quot;;
+font: 16pt &quot;Karla&quot;;
+background-color: rgb(37, 41, 50);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Palabra  W</string>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="inputPalabra">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>480</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Karla&quot;;
+color: rgb(255, 255, 255);
+ border-radius: 15px;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnValidar">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>530</y>
+      <width>181</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Karla</family>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Karla&quot;;
+font: 12pt &quot;Karla&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(37, 41, 50);
+ border-radius: 15px;</string>
+    </property>
+    <property name="text">
+     <string>Validar</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="DateGrammar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>221</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(37, 41, 50);
+ border-radius: 10px;</string>
+    </property>
+    <widget class="QPushButton" name="btnDetele">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>280</y>
+       <width>181</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Karla</family>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: bold 12pt &quot;Karla&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(255, 0, 0);
+ border-radius: 15px;</string>
+     </property>
+     <property name="text">
+      <string>Limpiar Datos</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Titulo1Grammar_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>330</y>
+       <width>181</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Karla</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 15pt &quot;Karla&quot;;
+font: 12pt &quot;Karla&quot;;
+background-color: rgb(37, 41, 50);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Arbol Derivación General</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnGenerateTree">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>360</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Karla</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;Karla&quot;;
+font: 12pt &quot;Karla&quot;;
+background-color: rgb(255, 255, 255);
+color: rgb(37, 41, 50);
+ border-radius: 15px;</string>
+     </property>
+     <property name="text">
+      <string>Generar Arbol</string>
+     </property>
+    </widget>
+   </widget>
+   <zorder>DateGrammar</zorder>
+   <zorder>alfabetoTitle</zorder>
+   <zorder>inputAlfabeto</zorder>
+   <zorder>noTerminalTitle</zorder>
+   <zorder>inputNoTerminal</zorder>
+   <zorder>axiomaTitle</zorder>
+   <zorder>inputAxioma</zorder>
+   <zorder>btnProducciones</zorder>
+   <zorder>tituloPalabra</zorder>
+   <zorder>inputPalabra</zorder>
+   <zorder>btnValidar</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
