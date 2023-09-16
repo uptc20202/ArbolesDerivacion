@@ -30,20 +30,24 @@ class gui_grammar(QMainWindow):
 
     def createAndAddGrammar(self):
         """Crear y agregar gramática."""
-        grammarName = ""
         noTerminalSymbols = self.inputNoTerminal.toPlainText().split(",")
         sigma = self.inputAlfabeto.toPlainText().split(",")
         axiom = self.inputAxioma.toPlainText()
         productions = self.window.productionsList
 
-        self.manager.create_grammar(grammarName, noTerminalSymbols, sigma, axiom, productions)
+        self.manager.create_grammar( noTerminalSymbols, sigma, axiom, productions)
 
         create_graph(self.manager.get_general_root())
     
     def validateWordOnGrammar(self):
         try:
             word = self.inputPalabra.toPlainText()
-            plot_graph(self.manager.get_particular_root(word))
+            nodeOfWork = self.manager.get_particular_root(word)
+            if nodeOfWork is None:
+                self.pop_up.label.setText("La palabra no existe")
+                self.pop_up.exec_()
+            else:
+                plot_graph(nodeOfWork)
         except Exception as e:
             self.pop_up.exec_()
             print("Error:", str(e))
@@ -71,8 +75,10 @@ class ProductionDialog(QDialog):
 
         self.btnDeleteProductions.clicked.connect(self.delete_production)
         self.btnAdd.clicked.connect(self.add_production)
-        
+        self.btnSalir.clicked.connect(self.close_window)
 
+    def close_window(self):
+        self.close() 
 
     def add_production(self): 
         no_terminal_symbol = self.noTerminalSimbol.toPlainText()

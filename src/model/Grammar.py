@@ -1,6 +1,5 @@
 class Grammar:
     def __init__(self, no_terminal_symbols, terminal_symbols, axiom_symbol):
-        self.grammar_name = None
         self.no_terminal_symbols = no_terminal_symbols
         self.terminal_symbols = terminal_symbols
         self.axiom_symbol = axiom_symbol
@@ -8,9 +7,6 @@ class Grammar:
 
     def get_grammar_name(self):
         return self.grammar_name
-
-    def set_grammar_name(self, grammar_name):
-        self.grammar_name = grammar_name
 
     def get_no_terminal_symbols(self):
         return self.no_terminal_symbols

@@ -11,9 +11,8 @@ class GrammarConfigure:
         self.general_root = None
         self.checker = None
 
-    def create_grammar(self, grammar_name, no_terminal_symbols, terminal_symbols, axiom_symbol, productions):
+    def create_grammar(self, no_terminal_symbols, terminal_symbols, axiom_symbol, productions):
         self.grammar = Grammar(self.change_to_list(no_terminal_symbols), self.change_to_list(terminal_symbols), axiom_symbol)
-        self.grammar.set_grammar_name(grammar_name)
         self.grammar.set_productions(productions)
         self.generate_general_tree()
         self.checker = Checker(self.grammar)

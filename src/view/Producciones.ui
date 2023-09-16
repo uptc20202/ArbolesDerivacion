@@ -122,9 +122,7 @@ font: 12pt &quot;Karla&quot;;</string>
 background-color: rgb(46, 52, 63);
 color: gray;
 text-align: center;
-padding: 6px;
-justify-content: center;
-align-items: center;</string>
+padding: 6px;</string>
    </property>
    <property name="text">
     <string>V → Producción</string>

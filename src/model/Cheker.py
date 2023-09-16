@@ -22,7 +22,6 @@ class Checker:
                 next_node.set_right(Node(terminal_symbol))
                 next_node = next_node.get_right()
                 language = language.get_right()
-                print("@Cheker @get_tree tree",tree)
             return tree
         return None
 
@@ -36,15 +35,12 @@ class Checker:
                 production = self.get_terminal_production(" " + word[i], actual_productions, word[i])
                 if production is not None:
                     language.add_to_bottom(Node(production))
-                    print("@Cheker @check_word languaje",language)
                     return language
             else:
-                print("@Cheker @check_word if false")
                 production1 = self.get_non_terminal_productions(actual_non_terminal, actual_productions, word[i])
                 actual_non_terminal = actual_productions[-1].get_production()[-1]
                 actual_productions.extend(self.get_productions(actual_non_terminal))
                 language.add_to_bottom(Node(production1))
-        print("Palabra no existe")
         return None
 
     def get_productions(self, non_terminal_symbol):
